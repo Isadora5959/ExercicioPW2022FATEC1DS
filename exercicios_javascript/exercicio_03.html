@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <!--DOM (Document Object Model)-->
+    <h1 id="titulo-secao">EXEPLOS DE DOM</h1>
+    <p id="filho"></p>
+    <p>Sou o 2º parágrafo</p>
+    <p class="p3">Sou o 3º parágrafo</p>
+    <p class="hello">Olá senhora e senhores!</p>
+    <p class="hello">Isso é um exemplo de <b>querySelectorAll</b> bem simples, para entender</p>
+    <p id="demo"></p>
+
+    <ul id="lista">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+    </ul>
+
+    <div class="x"></div>
+    <div class="x"></div>
+    <div class="x"></div>
+
+    <script type="text/javascript">
+        //document.getElementById(); serve para acessar um elemento HTML, com o Id indicado.
+        document.getElementById("filho").innerHTML = "Fui selecionado por ID";
+        //document.getElementsByTagName(); serve para selecionar um elemnto HTML, por tag.
+        var p1 = document.getElementsByTagName("p")[1];
+        p1.style.color = "#ff69b4";
+        //document.getElementsByClassName();serve para selecionar um elemnto HTML, pelo class.
+        var p3 = window.document.getElementsByClassName("p3")[0]
+        p3.style.background = "#008000";
+        //document.querySelectorAll(); serve para encontrar elementos HTML que corresponde a um seletor CSS, especificado por id, class, etc
+        const x = document.querySelectorAll("p.hello");
+        document.getElementById("demo").innerHTML = 
+        'O primeiro parágrafo (index 0) com class="intro" é: ' + x[0].innerHTML;
+        //document.querySelector(); serve para selecionar um elemnto CSS só (o primeiro)
+        var titulo = document.querySelector("#lista .item");
+        titulo.style.color = "#4169e1";
+
+        let classDiv = document.getElementsByClassName("x"); // quando tem o "s" no ELEMENT tem mais de um
+        classDiv[0].style.width = "200px";
+        classDiv[0].style.height = "200px";
+        classDiv[0].style.backgroundColor = "#FFCBAD";            
+        classDiv[0].innerHTML = " CLASS 0";
+
+        classDiv[1].style.width = "200px";
+        classDiv[1].style.height = "200px";
+        classDiv[1].style.backgroundColor = "#00BCA3";            
+        classDiv[1].innerHTML = " CLASS 1";
+        classDiv[1].style.position = "absolute";
+        classDiv[1].style.left = "800px";
+        classDiv[1].style.top = "300px";
+
+        classDiv[2].style.width = "200px";
+        classDiv[2].style.height = "200px";
+        classDiv[2].style.backgroundColor = "#877FD7";            
+        classDiv[2].innerHTML = " CLASS 2";
+    </script>
+
+</body>
+</html>
