@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    width: 500px;
+    margin: 0 auto;
+    padding:0 auto;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 40px;
+}
+div{
+    background-color: #dcdcdc;
+    display: block;
+    padding: 40px;
+    border-radius: 9px;
+    box-shadow: 1px 1px 10px black;
+}
+#nome, #telefone, #email, #cpf, #ms, #estado{
+    height: 30px;
+    width: 100%;
+    border-radius: 9px ;
+    border: 2px solid  #6959CD;
+}
+#estado{
+    color: #757575;
+}
+#btId{
+    height: 35px;
+    width: 102%;
+    background-color: #6959CD;
+    color: #eee;
+    border-radius: 9px ;
+    border: 1px solid #6959CD;
+    cursor: pointer;
+    align-items: center;
+}

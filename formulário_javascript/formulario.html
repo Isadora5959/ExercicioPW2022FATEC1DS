@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulário JS</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+
+<body >
+    <div>
+        <form id="form" name="" action="proc.php" method="post"
+          onsubmit="return false">
+            <table>
+                <tr>
+                    <td><strong>Nome:</strong></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="nome" id="nome" size="50"
+                        placeholder=" Digite seu nome"value="" required>
+                        <span></span></td>
+                </tr>
+                <tr>
+                    <td><strong>E-mail:</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="email" id="email" size="50" onBlur="" placeholder=" Digite seu e-mail" required><span></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cpf"><span><strong>CPF:</strong></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="cpf" type="text" onkeyup="cpfCheck(this)" placeholder=" Digite seu CPF" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );"> <span id="cpfResponse">
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Telefone:</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="telefone" id="telefone" size="14" requerid placeholder=" Digite seu telefone" maxlength="15" onkeyup="handlePhone(event)">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Escola sua Fruta:</strong></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="fruta" id="fruta" value="maça"> MAÇA<br>
+                        <input type="radio" name="fruta" id="fruta" value="banana"> BANANA<br>
+                        <input type="radio" name="fruta" id="fruta" value="pera"> PERA<br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Qual revista te interessa:</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="rev1" id="rev1" value="php"> PHP<br>
+                        <input type="checkbox" name="rev2" id="rev2" value="html"> HTML<br>
+                        <input type="checkbox" name="rev3" id="rev3" value="javascript">JavaScript<br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Estado: </strong></td>
+
+                    </td>
+                <tr>
+                    <td>
+                        <select name="estado" id="estado">
+                            <option value="estado">Selecione o Estado</option>
+                            <option value="ac">Acre</option>
+                            <option value="al">Alagoas</option>
+                            <option value="am">Amazonas</option>
+                            <option value="ap">Amapá</option>
+                            <option value="ba">Bahia</option>
+                            <option value="ce">Ceará</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="es">Espírito Santo</option>
+                            <option value="go">Goiás</option>
+                            <option value="ma">Maranhão</option>
+                            <option value="mt">Mato Grosso</option>
+                            <option value="ms">Mato Grosso do Sul</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="pa">Pará</option>
+                            <option value="pb">Paraíba</option>
+                            <option value="pr">Paraná</option>
+                            <option value="pe">Pernambuco</option>
+                            <option value="pi">Piauí</option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="rn">Rio Grande do Norte</option>
+                            <option value="ro">Rondônia</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="rr">Roraima</option>
+                            <option value="sc">Santa Catarina</option>
+                            <option value="se">Sergipe</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="to">Tocantins</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Mensagem: </strong></td>
+                </tr>
+                <tr>
+                    <td><textarea id="ms" name="ms" cols="50" rows="10"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td>
+
+                        <input type="submit" id="btId" value="CADASTRO">
+
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
